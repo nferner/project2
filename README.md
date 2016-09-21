@@ -28,10 +28,17 @@
 - ability to create multiple playlists
 - sort song and artist by alpha (maybe numeric)
 - randomize playlist
+- move up and down button
+- take in user's name and anyother for profile view?
+- API request to iTunes 
 
 ##Step 1
 ![Alt text](/pics/outlineOne.jpg)
 
+##Step 2
+
 
 ##Resources
 1. ["Thinking in React"](https://facebook.github.io/react/docs/thinking-in-react.html) by Pete Hunt 
+2. ["An Introduction to Color Theory for Web Designers"](https://webdesign.tutsplus.com/articles/an-introduction-to-color-theory-for-web-designers--webdesign-1437) by Thomas Cannon
+3. [Adobe Color CC](https://color.adobe.com/create/color-wheel/)
