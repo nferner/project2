@@ -18,7 +18,13 @@
 9. atom
 
 ##Next Steps
-- Outline app views/sketch out components
-- Idenitfy 
+- Outline app views/sketch out components (Wednesday)
+- Idenitfy snags/difficult code/pseudo code (Wednesday - Thursday)
+- Set-up flow of app prioritize based on difficulty/progress to be made (Thursday)
+- Wire-up (afternoon Thursday) 
 
 ##Bonuses
+* not in any order
+- ability to create multiple playlists
+- sort song and artist by alpha (maybe numeric)
+- randomize playlist
