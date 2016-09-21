@@ -28,3 +28,6 @@
 - ability to create multiple playlists
 - sort song and artist by alpha (maybe numeric)
 - randomize playlist
+
+# Step 1
+![Alt text](/pics/outlineOne.jpg)
