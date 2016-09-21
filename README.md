@@ -24,7 +24,7 @@
 - Wire-up (afternoon Thursday) 
 
 ##Bonuses
-* not in any order
+*Not in any order*
 - ability to create multiple playlists
 - sort song and artist by alpha (maybe numeric)
 - randomize playlist
