@@ -6,7 +6,9 @@ const Routes = () => {
   return (
     <Router history={hashHistory}>
       <Route path="/" component={Main}>
-
+        <IndexRoute component={Home} />
+        <Route path="login" component={Login} />
+        <Route path="register" component={Register} />
       </Route>
     </Router>
   );

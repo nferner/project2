@@ -6,6 +6,7 @@ class Playlist extends Component {
     return (
       <div>
         <input type="text" name="playlistTitle" placeholder="Playlist Title" />
+        <button>Save</button>
         <ArtistSong />
       </div>
     );
