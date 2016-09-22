@@ -1,7 +1,13 @@
-// connect to React and specify Component
-// connect toreact-router, going to utilize "Link" for the login and register pages
-// connect to firebase for connectivity to state and logging in
+import React from 'react';
 
-// class Main
-// will need proptypes: Main.proptypes = proptypes;
-// export default Main;
+class Main extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Testing</h1>
+      </div>
+    );
+  }
+}
+
+export default Main;
