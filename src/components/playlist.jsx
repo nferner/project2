@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import ArtistSong from './artistSong.jsx';
 
 class Playlist extends Component {
   render() {
     return (
       <div>
-        <h3>Name of Playlist</h3>
+        <input type="text" name="playlistTitle" placeholder="Playlist Title" />
+        <ArtistSong />
       </div>
     );
   }
