@@ -1,13 +1,29 @@
 // import react and components
+import React, { Component } from 'react';
 // import react router specifically withRouter
+import { withRouter } from 'react-router';
 // import firebase from firbase configuration
+import firebase from '../../firebase.config.js'
 
 // create a class for login and grab react
+class Login extends Component {
 // grab constructor from file
+  constructor() {
 // grab super from react
+    super();
 // set state as
+    this.setState = {
 // set user name as empty string
+      username: '',
 // set password as empty string
+      password: '',
+    }
+  }
+
+
+
+}
+
 
 // bind future use of handlechange
 // bind future use of handleSubmit
