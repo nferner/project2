@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 // going to need to add
 const propTypes = {
-  children: React.PropType.element,
+  children: React.PropTypes.element,
 };
 
 class Main extends Component {
-  const childrenGetMadProps = React.cloneElement(this.props.children);
   render() {
     return (
       <div>
@@ -16,7 +15,7 @@ class Main extends Component {
             <Link to="/playlist">Playlist</Link>
           </li>
         </ul>
-        {childrenGetMadProps}
+        {this.props.children}
       </div>
     );
   }
