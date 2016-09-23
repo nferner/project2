@@ -9,7 +9,6 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <h1>Testing</h1>
         <ul>
           <li>
             <Link to="/playlist">Playlist</Link>

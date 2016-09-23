@@ -8,7 +8,7 @@ const Routes = () => {
   return (
     <Router history={hashHistory}>
       <Route path="/" component={Main}>
-        <IndexRoute component={Home} />
+        <Route path="home" component={Home} />
         <Route path="playlist" component={Playlist} />
       </Route>
     </Router>
