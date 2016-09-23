@@ -1,15 +1,26 @@
-import React from 'react';
-import Playlist from './playlist.jsx';
+import React, { Component } from 'react';
+import { Link } from 'react-router';
 // going to need to add
-class Main extends React.Component {
+const propTypes = {
+  children: React.PropType.element,
+};
+
+class Main extends Component {
+  const childrenGetMadProps = React.cloneElement(this.props.children);
   render() {
     return (
       <div>
         <h1>Testing</h1>
-        <Playlist />
+        <ul>
+          <li>
+            <Link to="/playlist">Playlist</Link>
+          </li>
+        </ul>
+        {childrenGetMadProps}
       </div>
     );
   }
 }
+Main.propTypes = propTypes;
 
 export default Main;
