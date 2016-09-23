@@ -50,38 +50,43 @@ class Register extends Component {
     })
 // then (promise) the new 'user'
     .then((user) => {
-//call on firebase's database and reference all the 'users'
+// call on firebase's database and reference all the 'users'
       firebase.database.ref(users)
 // call on the use of child to create the new user with a user id (uid)
       .child(user.uid)
 /* set th first name, last name to an empty string for now(need to add post function) and email
     as username*/
-      .set(firstName: ''; lastName: ''; email: username)
-    });
-
-
-
+      .set({firstName: '', lastName: '', email: username})
+    })
   }
-
-
+// render the following to prep for the dom
+  render() {
+// return the following for render
+    return(
+// create div (large container) only one allowed
+      <div>
+// create another div with an id to style later
+        <div id="register">
+// create another div to hold each piece of information
+          <div>
+// create an input box for new user to create username with their email
+            <input name="username" type="text" onChange={this.handleChange} placeholder="username"/>
+// close div
+          </div>
+// create new div
+          <div>
+// create a new input box for the new user's password
+            <input name="password" type="password" onChange={this.handleChange} placeholder="password"/>
+// close div
+          </div>
+// create button to activate the event of submitting and saving the new username and password
+          <button onClick={this.handleSubmit}>Register</button>
+// close div
+        </div>
+// close div
+      </div>
+    );
+  }
 }
 
-
-
-
-
-// render the following to prep for the dom
-// return the following for render
-// create div (large container) only one allowed
-// create another div with an id to style later
-// create another div to hold each piece of information
-// create an input box for new user to create username with their email
-// close div
-// create new div
-// create a new input box for the new user's password
-// close div
-// create button to activate the event of submitting and saving the new username and password
-// close div
-// close div
-
-// export the register file to be routed and displayed
+export default Register;
