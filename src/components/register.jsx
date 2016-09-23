@@ -33,25 +33,42 @@ class Register extends Component {
 // set the new state as the new state object
     this.setState(stateObject);
   }
+// create function to handle the submit button and transferring that information to fb
+  handleSubmit() {
+/* set variable which will take the new state of the username or password equal to the
+    new entirety of the registrations state*/
+    const { username, password } = this.state;
+// call on firebase configuration information and have it use the authorization file
+    firebase.auth()
+/* have those use create a new user name and password with the new username and password passed
+    through them*/
+    .createNewUsernameAndPassword(username, password)
+// use .catch to catch if there is an error when submitted
+    .catch((err) => {
+// console log that error so we know what's up
+      console.log(err);
+    })
+// then (promise) the new 'user'
+    .then((user) => {
+//call on firebase's database and reference all the 'users'
+      firebase.database.ref(users)
+// call on the use of child to create the new user with a user id (uid)
+      .child(user.uid)
+/* set th first name, last name to an empty string for now(need to add post function) and email
+    as username*/
+      .set(firstName: ''; lastName: ''; email: username)
+    });
+
+
+
+  }
 
 
 }
 
 
 
-// create function to handle the submit button and transferring that information to fb
-/* set varriable which will take the new state of the username or password equal to the
-    new entirety of the registrations state*/
-// call on firebase configuration information and have it use the authorization file
-/* have those use create a new user name and password with the new username and password passed
-    through them*/
-// use .catch to catch if there is an error when submitted
-// console log that error so we know what's up
-// then (promise) the new 'user'
-// call on firebase's database and reference all the 'users'
-// call on the use of child to create the new user with a user id (uid)
-/* set th first name, last name to an empty string for now(need to add post function) and email
-    as username*/
+
 
 // render the following to prep for the dom
 // return the following for render
