@@ -17,22 +17,26 @@ class Login extends Component {
       username: '',
 // set password as empty string
       password: '',
-    }
+    };
   }
-
-
-
 }
-
-
 // bind future use of handlechange
+this.handleChange = this.handleChange.bind(this);
 // bind future use of handleSubmit
+this.handleSubmit = this.handleSubmit.bind(this);
 
 // create handleChange of username and password function
+handleChange(e) {
 // create a stateObject that empty
+  const stateObject = {};
 // create a stateKey that will grab the name from the event
+  const stateKey = e.target.name;
 // set stateObject with the stateKey equal to the value of the target
+  stateObject[stateKey] = e.target.value;
 // pass the new stateObject through set the state of the login
+  this.setState(stateObject);
+}
+
 
 // create handleSubmit function
 // set variable of username and password equal to the newly changed state
