@@ -1,22 +1,43 @@
 // connect to react to pull properties, specifically components
+import React, { Component } from 'react';
 // connect to firebase to register the new user with the database
+import firebase from '../../firebase.config.jsx';
 
 // set up a class for register because it will need state to work (data being used and saved)
+class Register extends Component {
 // create constructor to use for register's properties
+  constructor() {
 // create super for react's properties
+    super();
 // will need to set state to grab info for registration
+    this.state = {
 // set username to empty string to be filled out later by new user
+      username: '',
 // set password to empty string to be filled out later by new user
-
+      password: '',
+    };
 // will need a function to handle the change of state when new user changes username/password
+    this.handleChange = this.handleChange.bind(this);
 // will need a function to handle submitting the new information to the firebase databadse
-
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 // create function to handle the change of state for user name and password
+  handleChange(e) {
 // create a new variable empty for the new 'string'(object) being inputted by the new user
+    const stateObject = {};
 // create a new variable to set the new username and password as keys for the new user
-/* set the value of the new username/password equal to the stateKey which will be the Index
+    const stateKey = e.target.name;
+/* Set the value of the new username/password equal to the stateKey     which will be the Index
     which will now have an index which will be set as the new 'string' state object*/
+    stateObject[stateKey] = e.target.value;
 // set the new state as the new state object
+    this.setState(stateObject);
+  }
+
+
+}
+
+
 
 // create function to handle the submit button and transferring that information to fb
 /* set varriable which will take the new state of the username or password equal to the
