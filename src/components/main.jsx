@@ -22,7 +22,7 @@ class Main extends Component {
 // add component did mount to retrieve the playlist when page is opened
   componentDidMount() {
 // function for getting playlist goes here
-    getPlaylist();
+    this.getPlaylist();
   }
 // add 'get' request
   getPlaylist() {
@@ -41,18 +41,21 @@ class Main extends Component {
     });
   }
 
-
-
-
-
-
-
 // need ability to 'post' information
+  postPlaylist(data) {
 // set url as const maybe now set the variable outside these functions to use
 // use 'request' and 'post' to enter infor into database pass the url through
+    request.post(mainUrl)
 // use 'send' with the information passed through
+    .send(data)
 // use .then empty with fat arrow
+    .then(() => {
 // to get request the information which will render and set the state with the new addition
+      this.getPlaylist();
+    });
+  }
+
+
 
 // need ability to edit 'push' information
 
