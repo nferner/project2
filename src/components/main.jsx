@@ -24,6 +24,11 @@ class Main extends Component {
 // now set the state equal to the palylist variable
 
 // need ability to 'post' information
+// set url as const maybe now set the variable outside these functions to use
+// use 'request' and 'post' to enter infor into database pass the url through
+// use 'send' with the information passed through
+// use .then empty with fat arrow
+// to get request the information which will render and set the state with the new addition
 
 // need ability to edit 'push' information
 
