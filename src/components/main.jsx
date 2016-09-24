@@ -1,27 +1,51 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-// add superagent for get requests
+import request from 'superagent';
 
 const propTypes = {
   children: React.PropTypes.element,
 };
 
+const mainUrl = 'https://project-2-893b8.firebaseio.com/';
+
 class Main extends Component {
 // add constructor to pass props
+  constructor(props) {
 // add super and pass props
+    super(props);
 // this.state has the variable playlist equal to an empty object
-// add component did mount to retrieve the playlist when page is opened
-// function for getting playlist goes here
+    this.state = {
+      playlist: {},
+    }
+  }
 
+// add component did mount to retrieve the playlist when page is opened
+  componentDidMount() {
+// function for getting playlist goes here
+    getPlaylist();
+  }
 // add 'get' request
+  getPlaylist() {
 // set the url as a variable 'const' call url or base url
 /* need to use the 'request' from superagent to 'get' information from the url. pass the url
     through 'get'*/
+    request.get(mainUrl)
 /* use .then with 'response' from database passed through, fat arrow function cause its supposed to
-    do something*/
+        do something*/
+    .then((response) => {
 /* like get the playlist set playlist as variable and set it equal to the response use the
     .body method*/
+      const playlist = response.body;
 // now set the state equal to the palylist variable
+      this.setSate = ({ playlist })
+    });
+  }
+
+
+
+
+
+
 
 // need ability to 'post' information
 // set url as const maybe now set the variable outside these functions to use
