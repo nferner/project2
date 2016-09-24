@@ -6,7 +6,7 @@ const propTypes = {
   children: React.PropTypes.element,
 };
 
-const mainUrl = 'https://project-2-893b8.firebaseio.com/';
+const mainUrl = 'https://project-2-893b8.firebaseio.com/playlist.json';
 
 class Main extends Component {
 // add constructor to pass props
@@ -55,13 +55,19 @@ class Main extends Component {
     });
   }
 
-
-
 // need ability to edit 'push' information
 
-// need ability to delete 'del' information
-
-
+// need ability to delete 'del' information pass unique identifier for information (id)
+  deletePlaylist(id) {
+// creat variable for the url/id we are deleting need to id the id
+    const url = `https://project-2-893b8.firebaseio.com/playlist/${id}.json`;
+// 'request' to delete (del) the id'd url (pass url through)
+    request.del(url)
+// .then we get the playlist again
+    .then(() => {
+      this.getPlaylist();
+    });
+  }
   render() {
     return (
       <div>
