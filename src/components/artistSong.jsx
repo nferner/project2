@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
 class ArtistSong extends Component {
+
   render() {
     return (
       <div>
-        <input type="text" name="Artist" placeholder="Artist" />
-        <input type="text" name="Song" placeholder="Song" />
+        <input id="artist" type="text" name="Artist" placeholder="Artist" />
+        <input id="song" type="text" name="Song" placeholder="Song" />
         <button>Save</button>
       </div>
     );

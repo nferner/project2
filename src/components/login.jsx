@@ -12,7 +12,7 @@ class Login extends Component {
 // grab super from react
     super();
 // set state as
-    this.setState = {
+    this.state = {
 // set user name as empty string
       username: '',
 // set password as empty string
@@ -42,18 +42,17 @@ class Login extends Component {
 // call firebase supported by authorization
     firebase.auth()
 // use firebases method of signInWithEmailAndPassword and pass through the inputted pword and user
-    .signInWithEmailAndPassword(username, password)
+      .signInWithEmailAndPassword(username, password)
 // use catch method if there is an error, pass the error through
-    .catch((err) => {
+      .catch((err) => {
 // set variable of errorCode equal to the err.code
-      const errorCode = err.code;
+        const errorCode = err.code;
 // set variable errorMessage equal to err.message;
-      const errorMessage = err.message
+        const errorMessage = err.message
 // console log that err
-      console.log(err)
-    });
+        console.log(err)
+      });
 // then push the new propertis through the router method to the dashboard file
-    .then.router.push('/dashboard.jsx')
   }
 // render all this new information
   render() {
@@ -61,28 +60,27 @@ class Login extends Component {
     return (
 // create div
       <div>
-// create div with id for styling
-        <div id="login_view">
-// create div hold/separate inputs
+        <div className="enter">
           <div>
-// create input for username and onChange utilize handleChange
-            <input name="username" type="text" placeholder="username" onChange={handleChange} />
-// close div
+            <input className="login" name="username" type="text" placeholder="username" onChange={this.handleChange} />
+            <input className="password" name="password" type="password" placeholder="password" onChange={this.handleChange} />
           </div>
-// create div
-          <div>
-// create input for pword and onchange utilize handleChange
-            <input name="password" type="password" placeholder="password" onChange={handleChange} />
-// close div
-          </div>
-// create button and on click use submit finction
-          <button type="submit" onClick={handleSubmit}>Login</button>
-// close div
+          <button type="submit" onClick={this.handleSubmit}>Login</button>
         </div>
-// close div
       </div>
     );
   }
 }
 
 export default withRouter (Login);
+
+// create div with id for styling
+// create div hold/separate inputs
+// create input for username and onChange utilize handleChange
+// close div
+// create div
+// create input for pword and onchange utilize handleChange
+// close div
+// create button and on click use submit finction
+// close div
+// close div

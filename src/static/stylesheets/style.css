@@ -1,3 +1,43 @@
 body {
-  background-color: pink;
+  background-color: #00FF6E;
+}
+
+#artist {
+  width: 15rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  margin-left: 25%;
+  background-color: #D6CBFF;
+  color: #CD4305;
+}
+
+#song {
+  width: 15rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  margin-left: 5%;
+  background-color: #D6CBFF;
+  color: #CD4305;
+}
+
+.enter {
+  display: inline-block;
+}
+
+.login {
+  width: 15rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  margin-left: 25%;
+  background-color: #D6CBFF;
+  color: #CD4305;
+}
+
+.password{
+  width: 15rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  margin-left: 5%;
+  background-color: #D6CBFF;
+  color: #CD4305;
 }

@@ -1,7 +1,7 @@
 // connect to react to pull properties, specifically components
 import React, { Component } from 'react';
 // connect to firebase to register the new user with the database
-import firebase from '../../firebase.config.jsx';
+import firebase from '../../firebase.config.js';
 
 // set up a class for register because it will need state to work (data being used and saved)
 class Register extends Component {
@@ -42,7 +42,7 @@ class Register extends Component {
     firebase.auth()
 /* have those use create a new user name and password with the new username and password passed
     through them*/
-    .createNewUsernameAndPassword(username, password)
+    .createUserWithEmailAndPassword(username, password)
 // use .catch to catch if there is an error when submitted
     .catch((err) => {
 // console log that error so we know what's up
@@ -56,37 +56,35 @@ class Register extends Component {
       .child(user.uid)
 /* set th first name, last name to an empty string for now(need to add post function) and email
     as username*/
-      .set({firstName: '', lastName: '', email: username})
+      .set({ firstName: '', lastName: '', email: username });
     })
   }
 // render the following to prep for the dom
   render() {
 // return the following for render
-    return(
+    return (
 // create div (large container) only one allowed
       <div>
-// create another div with an id to style later
-        <div id="register">
-// create another div to hold each piece of information
+        <div className="enter">
           <div>
-// create an input box for new user to create username with their email
-            <input name="username" type="text" onChange={this.handleChange} placeholder="username"/>
-// close div
+            <input className="login" name="username" type="text" onChange={this.handleChange} placeholder="username" />
+            <input className="password" name="password" type="password" onChange={this.handleChange} placeholder="password" />
           </div>
-// create new div
-          <div>
-// create a new input box for the new user's password
-            <input name="password" type="password" onChange={this.handleChange} placeholder="password"/>
-// close div
-          </div>
-// create button to activate the event of submitting and saving the new username and password
           <button onClick={this.handleSubmit}>Register</button>
-// close div
         </div>
-// close div
       </div>
     );
   }
 }
 
 export default Register;
+// create another div with an id to style later
+// create another div to hold each piece of information
+// create an input box for new user to create username with their email
+// close div
+// create a new input box for the new user's password
+// create new div
+// close div
+// create button to activate the event of submitting and saving the new username and password
+// close div
+// close div
