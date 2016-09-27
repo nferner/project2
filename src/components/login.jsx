@@ -1,9 +1,9 @@
 // import react and components
 import React, { Component } from 'react';
 // import react router specifically withRouter
-import { withRouter } from 'react-router';
+import ReactRouter, { withRouter }  from 'react-router';
 // import firebase from firbase configuration
-import firebase from '../../firebase.config.js'
+import firebase from '../../firebase.config.js';
 
 // create a class for login and grab react
 class Login extends Component {
@@ -51,8 +51,10 @@ class Login extends Component {
         const errorMessage = err.message
 // console log that err
         console.log(err)
+        .then(() => {
+        this.props.router.push(`/dashboard/${username}`);
+        });
       });
-// then push the new propertis through the router method to the dashboard file
   }
 // render all this new information
   render() {

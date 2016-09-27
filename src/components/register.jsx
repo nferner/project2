@@ -1,6 +1,7 @@
 // connect to react to pull properties, specifically components
 import React, { Component } from 'react';
 // connect to firebase to register the new user with the database
+import Router from 'react-router';
 import firebase from '../../firebase.config.js';
 
 // set up a class for register because it will need state to work (data being used and saved)
@@ -51,12 +52,15 @@ class Register extends Component {
 // then (promise) the new 'user'
     .then((user) => {
 // call on firebase's database and reference all the 'users'
-      firebase.database.ref(users)
+      firebase.database.ref('users')
 // call on the use of child to create the new user with a user id (uid)
       .child(user.uid)
 /* set th first name, last name to an empty string for now(need to add post function) and email
     as username*/
       .set({ firstName: '', lastName: '', email: username });
+    })
+    .then(() => {
+      this.props.router.push(`/dashboard/${username}`);
     })
   }
 // render the following to prep for the dom

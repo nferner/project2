@@ -1,17 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ArtistSong from './artistSong.jsx';
 
-class Playlist extends Component {
+const propTypes = {
+  posts: React.PropTypes.array.isRequired,
+  handlePublish: React.PropTypes.func,
+  handleDelete: React.PropTypes.func,
+};
+
+class Playlist extends React.Component {
   render() {
+    const postElements = this.props.posts.map((post, idx) => {
+      return (
+        <li key={idx}>
+          <ArtistSong
+            handleDelete={this.props.handleDelete}
+            handlePublish={this.props.handlePublish}
+            artist={post.artist}
+            song={post.song}
+            id={post.id}
+          />
+        </li>
+      );
+    });
     return (
-      <div>
-        <h1>Placeholder for title</h1>
-        <input id="playlist" type="text" name="playlistTitle" placeholder="Playlist Title" />
-        <button>Save</button>
-        <ArtistSong />
-      </div>
+      <ul>
+        {postElements}
+      </ul>
     );
   }
 }
+
+Playlist.propTypes = propTypes;
 
 export default Playlist;

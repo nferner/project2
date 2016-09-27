@@ -70,10 +70,10 @@ class Main extends Component {
   }
   render() {
     return (
-      <div>
+      <div id="links">
         <ul>
           <li>
-            <Link to="/playlist">Playlist</Link>
+            <Link to="/dashboard">Dashboard</Link>
           </li>
           <li>
             <Link to="/login">Login</Link>
