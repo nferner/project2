@@ -9,19 +9,26 @@
 ###Technologies
 1. React: for view management
 2. Firebase: database and sign-in capabilities
-3. Babel
-4. Javascript/JSX
+3. Babel: for translation cross browser and versions
+4. Javascript/JSX: code base 
 5. HTML
 6. CSS
-7. Webpack
+7. Webpack 
 8. eslint
 9. atom
 
-###Next Steps
+###Steps
 - Outline app views/sketch out components (Wednesday)
 - Idenitfy snags/difficult code/pseudo code (Wednesday - Thursday)
 - Set-up flow of app prioritize based on difficulty/progress to be made (Thursday)
 - Wire-up (afternoon Thursday) 
+- Map out again review processes and communication between components
+- code
+- style
+
+###Problems
+- reorganized the components multiple times to get state
+- sign out and redirects 
 
 ###Bonuses
 *Not in any order*
@@ -32,10 +39,7 @@
 - take in user's name and anyother for profile view?
 - API request to iTunes 
 
-##Step 1
-![Alt text](/pics/outlineOne.jpg)
 
-##Step 2
 
 
 ##Resources
