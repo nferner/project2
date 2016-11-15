@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Router, hashHistory } from 'react-router';
+import { Route, Router, hashHistory, IndexRoute } from 'react-router';
 import Main from '../components/main.jsx';
 import Home from '../components/home.jsx';
 import Dashboard from '../components/dashboard.jsx';
@@ -11,7 +11,7 @@ const Routes = () => {
   return (
     <Router history={hashHistory}>
       <Route path="/" component={Main}>
-        <Route path="home" component={Home} />
+        <IndexRoute component={Home} />
         <Route path="dashboard" component={Dashboard} />
         <Route path="login" component={Login} />
         <Route path="register" component={Register} />

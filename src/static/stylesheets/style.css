@@ -1,8 +1,9 @@
 body {
-  background-color: #00FF6E;
+  background-image: image("./../pics/CBGB.jpeg");
 }
 #links {
   text-decoration: none;
+  margin-left: 50%;
 }
 
 #artist {
@@ -15,6 +16,7 @@ body {
 }
 h1 {
   text-align: center;
+  margin-top: 10%;
 }
 
 #container {

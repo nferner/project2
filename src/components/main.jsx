@@ -70,18 +70,12 @@ class Main extends Component {
   }
   render() {
     return (
-      <div id="links">
-        <ul>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
-          <li>
-            <Link to="/register">Register</Link>
-          </li>
-        </ul>
+      <div>
+        <nav id="links">
+          <Link to="dashboard">Dashboard</Link>
+          <Link to="login">Login</Link>
+          <Link to="register">Register</Link>
+        </nav>
         {this.props.children}
       </div>
     );

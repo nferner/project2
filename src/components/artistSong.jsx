@@ -56,14 +56,6 @@ class ArtistSong extends React.Component {
           this.props.song === this.state.localSong;
   }
   render() {
-    let buttons;
-    if (this.isSaved()) {
-      buttons = (
-        <div className="active-buttons">
-          <button onClick={this.handleDeleteClick}>X</button>
-        </div>
-      );
-    }
     return (
       <div className={this.isSaved() ? 'saved' : 'not-saved'} >
         <form className="post-display" onSubmit={this.handleSubmit}>
@@ -83,8 +75,8 @@ class ArtistSong extends React.Component {
             type="submit"
             value="SAVE"
           />
+          <button onClick={this.handleDeleteClick}>X</button>
         </form>
-        {buttons}
       </div>
     );
   }
