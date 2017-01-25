@@ -11,7 +11,7 @@ class Playlist extends React.Component {
   render() {
     const postElements = this.props.posts.map((post, idx) => {
       return (
-        <li key={idx}>
+        <li className="listItem" key={idx}>
           <ArtistSong
             handleDelete={this.props.handleDelete}
             handlePublish={this.props.handlePublish}
@@ -23,7 +23,7 @@ class Playlist extends React.Component {
       );
     });
     return (
-      <ul>
+      <ul id="playlist">
         {postElements}
       </ul>
     );

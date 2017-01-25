@@ -58,20 +58,23 @@ class ArtistSong extends React.Component {
   render() {
     return (
       <div className={this.isSaved() ? 'saved' : 'not-saved'} >
-        <form className="post-display" onSubmit={this.handleSubmit}>
-          <input id="artist"
+        <form id="postDisplay" onSubmit={this.handleSubmit}>
+          <input
+            className="input"
             type="text"
             name="artist"
             value={this.state.localArtist}
             onChange={this.editArtist} placeholder="Artist"
           />
-          <input id="song"
+          <input
+            className="input"
             type="text"
             name="song"
             value={this.state.localSong}
             onChange={this.editSong} placeholder="Song"
           />
           <input
+            id="save"
             type="submit"
             value="SAVE"
           />

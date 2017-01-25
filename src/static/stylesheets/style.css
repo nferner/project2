@@ -1,54 +1,54 @@
 body {
-  background-image: image("./../pics/CBGB.jpeg");
-}
-#links {
-  text-decoration: none;
-  margin-left: 50%;
-}
-
-#artist {
-  width: 15rem;
-  height: 2rem;
-  font-size: 1.5rem;
-  margin-left: 25%;
-  background-color: #D6CBFF;
-  color: #CD4305;
-}
-h1 {
+  background-color: #77CEFF;
   text-align: center;
-  margin-top: 10%;
+  max-width: 100%;
+  width: 900px;
+  margin: auto;
+  font-family: 'Noto Sans', sans-serif;
 }
-
-#container {
-  align-self: center;
+#navBar {
+  text-align: center;
+  background-color: white;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
 }
-#song {
+.link {
+  text-decoration: none;
+  display: inline-flex;
+  margin: .5rem;
+  font-size: 2rem;
+}
+#homeTitle {
+  font-size: 3rem;
+  font-weight: bold;
+}
+#description {
+  text-align: left;
+  margin-left: 1rem;
+}
+#requirements {
+  text-align: left;
+  margin-left: 1rem;
+}
+#playlist {
+  background-color: #FFD094;
+  list-style-type: none;
+  padding: 0px;
+}
+#postDisplay {
+  margin: 0px;
+}
+.input {
   width: 15rem;
   height: 2rem;
-  font-size: 1.5rem;
-  margin-left: 5%;
-  background-color: #D6CBFF;
-  color: #CD4305;
+  margin: .5rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
 }
-
-.enter {
-  display: inline-block;
-}
-
-.login {
-  width: 15rem;
-  height: 2rem;
-  font-size: 1.5rem;
-  margin-left: 25%;
-  background-color: #D6CBFF;
-  color: #CD4305;
-}
-
-.password{
-  width: 15rem;
-  height: 2rem;
-  font-size: 1.5rem;
-  margin-left: 5%;
-  background-color: #D6CBFF;
-  color: #CD4305;
+#save {
+  width: 5rem;
+  margin: .5rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ACFF87;
 }

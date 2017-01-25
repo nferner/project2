@@ -64,10 +64,20 @@ class Login extends Component {
       <div>
         <div className="enter">
           <div>
-            <input className="login" name="username" type="text" placeholder="username" onChange={this.handleChange} />
-            <input className="password" name="password" type="password" placeholder="password" onChange={this.handleChange} />
+            <input
+              className="input"
+              name="username"
+              type="text"
+              placeholder="username" onChange={this.handleChange}
+            />
+            <input
+              className="input"
+              name="password"
+              type="password"
+              placeholder="password" onChange={this.handleChange}
+            />
           </div>
-          <button type="submit" onClick={this.handleSubmit}>Login</button>
+          <button id="save" type="submit" onClick={this.handleSubmit}>Login</button>
         </div>
       </div>
     );

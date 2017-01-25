@@ -2,7 +2,7 @@
   "name": "project2",
   "version": "1.0.0",
   "description": "create and store a playlist",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --hot --progress --colors"
@@ -36,8 +36,5 @@
     "eslint-plugin-import": "^1.15.0",
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.3.0"
-  },
-  "engines": {
-    "node": "6.3.1"
   }
 }

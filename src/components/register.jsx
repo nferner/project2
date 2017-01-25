@@ -71,10 +71,35 @@ class Register extends Component {
       <div>
         <div className="enter">
           <div>
-            <input className="login" name="username" type="text" onChange={this.handleChange} placeholder="username" />
-            <input className="password" name="password" type="password" onChange={this.handleChange} placeholder="password" />
+            <input
+              className="input"
+              name="username"
+              type="text"
+              onChange={this.handleChange} placeholder="username"
+            />
+            <input
+              className="input"
+              name="password"
+              type="password" onChange={this.handleChange} placeholder="password"
+            />
           </div>
-          <button onClick={this.handleSubmit}>Register</button>
+          <div>
+            <input
+              className="input"
+              name="first"
+              type="text"
+              onChange={this.handleChange}
+              placeholder="First Name"
+            />
+            <input
+              className="input"
+              name="last"
+              type="text"
+              onChange={this.handleChange}
+              placeholder="Last Name"
+            />
+          </div>
+          <button id="save" onClick={this.handleSubmit}>Register</button>
         </div>
       </div>
     );
